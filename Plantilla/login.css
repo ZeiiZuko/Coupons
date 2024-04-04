@@ -24,10 +24,10 @@ section{
 .container{
   position: relative;
   width: 300px;
+  height: 350px;
   border-radius: 20px;
   backdrop-filter: blur(15px);
   border: 2px solid rgba(255, 255, 255, .6);
-  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,8 @@ section{
   border-bottom: 2px solid #fff;
 }
 
+
+
 .input-container label{
   position: absolute;
   top: 50%;
@@ -58,8 +60,10 @@ section{
   font-weight: bold;
 }
 
+
+
 input:focus ~ label,
-inpunt:valid ~ label{
+input:valid ~ label{
   top: -5px;
 }
 
@@ -73,6 +77,12 @@ inpunt:valid ~ label{
   padding: - 35px 0 5px;
   color: #000000;
 }
+
+.input-container input::-webkit-inner-spin-button, .input-container input::-webkit-outer-spin-button{
+  -webkit-appearance:none;
+  appearance: none;
+}
+
 
 .icon{
   position: absolute;
