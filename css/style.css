@@ -38,6 +38,7 @@ nav li a:hover {
   background-color: var(--border);
   font: bold;
   text-decoration: underline;
+  color: red;
 }
 
 .center {
