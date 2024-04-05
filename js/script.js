@@ -31,3 +31,12 @@ const useCoupon = async (id) => {
   location.reload();
 };
 getCoupons();
+
+const isAuth = () => {
+  const token = sessionStorage.getItem('userToke');
+  if (!token) {
+    location.href = 'pages/login.html';
+  }
+}
+
+isAuth();
