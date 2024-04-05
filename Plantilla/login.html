@@ -10,19 +10,18 @@
     <section>
       <div class="container">
         <div class="login">
-          <form action="#">
+          <form id="form">
             <h2>Enter token</h2>
 
             <div class="input-container">
               <i class="fa-solid fa-key icon"></i>
-              <input type="number" required />
+              <input type="number" id="token" required />
               <label for="#">Token</label>
             </div>
+            <div class="button">
+              <button type="submit">Let's go!</button>
+            </div>
           </form>
-
-          <div class="button">
-            <button>Let's go!</button>
-          </div>
         </div>
       </div>
     </section>
@@ -31,5 +30,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./login.js"></script>
   </body>
 </html>

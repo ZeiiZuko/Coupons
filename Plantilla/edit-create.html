@@ -12,15 +12,16 @@
         <div class="form-ec">
           <form action="#">
             <div class="input-container-ec">
-              <input type="text" placeholder='Description' />
-              <input type="datetime" placeholder='Due date'/>
+              <input type="text" id="description" placeholder='Description' />
+              <input type="date" id="dueDate" placeholder='Due date'/>
             </div>
           </form>
           <div class="DivButton-ec">
-            <button class='button-ec'>Done</button>
+            <button onclick="handleCreateCoupon()" class='button-ec'>Done</button>
           </div>
         </div>
       </div>
     </section>
+    <script src="./createAndEdit.js"></script>
   </body>
 </html>
