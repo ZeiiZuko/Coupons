@@ -16,7 +16,7 @@ const handleLogin = async () => {
 
   if (finalResponse.token) {
     sessionStorage.setItem('userToken', finalResponse.token);
-    location.href = 'index.html';
+    location.href = '../index.html';
   } else {
     alert(finalResponse.message)
   }

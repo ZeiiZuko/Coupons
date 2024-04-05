@@ -24,11 +24,11 @@ const handleCreateCoupon = async () => {
   if (response.status === 401) {
     alert('El token esta modificado o no es valido');
     sessionStorage.removeItem('userToken');
-    location.href = 'login.html';
+    location.href = '/pages/login.html';
     return;
   }
 
   await response.json();
-  location.href = 'index.html';
+  location.href = '../index.html';
 
 }
