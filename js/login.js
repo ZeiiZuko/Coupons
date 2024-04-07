@@ -1,24 +1,15 @@
 const handleLogin = async () => {
   const token = document.getElementById('token').value;
-  const END_POINT = 'https://coupons-hwhz.onrender.com/api/auth/login';
   const payload = {
     code: Number(token),
   };
-  const result = await fetch(END_POINT, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  });
+  const result = await request.post(`/auth/login`,{body:payload});
 
-  const finalResponse = await result.json();
-
-  if (finalResponse.token) {
-    sessionStorage.setItem('userToken', finalResponse.token);
+  if (result.token) {
+    sessionStorage.setItem('userToken', result.token);
     location.href = '../index.html';
   } else {
-    alert(finalResponse.message)
+    alert(result.message)
   }
 };
 

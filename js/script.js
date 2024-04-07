@@ -1,6 +1,5 @@
 const getCoupons = async () => {
-  const response = await fetch('https://coupons-hwhz.onrender.com/api/coupons');
-  const coupons = await response.json();
+  const coupons = await request.get('/coupons');
 
   let couponsText = '';
 
@@ -20,23 +19,9 @@ const getCoupons = async () => {
   mainDiv.innerHTML = couponsText;
 };
 const useCoupon = async (id) => {
-  const response = await fetch(
-    `https://coupons-hwhz.onrender.com/api/coupons/${id}`,
-    {
-      method: 'delete',
-    }
-  );
-  const coupon = await response.json();
+  const coupon = await request.delete(`/coupons/${id}`)
   alert(coupon.message);
   location.reload();
 };
 getCoupons();
 
-const isAuth = () => {
-  const token = sessionStorage.getItem('userToke');
-  if (!token) {
-    location.href = 'pages/login.html';
-  }
-}
-
-isAuth();
